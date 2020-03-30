@@ -16,7 +16,7 @@ def count_image(file_list):
             count = count +1
     return count
 
-# 调用函数
+# 调用函数 
 img_list = ['1.jpg','2.md','3.bmp','4.webp','5.mp4','6.png']
 result = count_image(img_list)
 print('一共有',result,'个图片文件')
