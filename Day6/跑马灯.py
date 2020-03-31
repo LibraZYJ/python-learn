@@ -1,3 +1,6 @@
+"""
+在控制台输出跑马灯演示
+"""
 import os
 import time
 

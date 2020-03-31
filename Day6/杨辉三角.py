@@ -1,3 +1,7 @@
+"""
+打印杨辉三角
+"""
+
 def main():
     num = int(input('Number of rows:'))
     yh = [[]]*num
