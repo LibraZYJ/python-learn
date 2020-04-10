@@ -221,7 +221,7 @@ data = [[d[1], d[0], d[2]] for d in data]
         zaxis3d_opts=opts.Axis3DOpts(type_="value"),
     )
     .set_global_opts(
-        visualmap_opts=opts.VisualMapOpts(
+        visualmap_opts=opts.VisualMapOpts( 
             max_=20,
             range_color=[
                 "#313695",
