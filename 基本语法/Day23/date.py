@@ -1,11 +1,10 @@
 """
 date
+对不起
 @Date 2020.04.16
 """
-
 from datetime import date, datetime
 import calendar
-
 
 def print_mydate(mydate):
     print(f'今天是:{mydate}\n')
@@ -29,6 +28,5 @@ def print_mydate(mydate):
 
     month_last_day = date(mydate.year, mydate.month, days)
     print(f"当月最后一天:{month_last_day}\n")
-
 
 print_mydate(date.today())
