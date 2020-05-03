@@ -2,7 +2,6 @@
 基本操作
 """
 
-
 def base_operation():
     # 去掉列表中的一个最小值和一个最大值，计算剩余元素的平均值
     from random import randint, sample
