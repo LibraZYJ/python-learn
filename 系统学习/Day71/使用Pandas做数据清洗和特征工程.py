@@ -23,19 +23,19 @@ from pyecharts.globals import ThemeType
 
 # 1.导入电影数据文件 movies.dat，包括3个字段：Movie ID, Movie Title, Genre
 # 分别表示电影 ID、电影名称、题材（可能属于多个题材，中间用 | 分割）
-movies = pd.read_csv('./语法基础/res/dataset/movies.dat', delimiter='::',
+movies = pd.read_csv('./res/dataset/movies.dat', delimiter='::',
                      engine='python', header=None, names=['Movie ID', 'Movie Title', 'Genre'], encoding='utf-8')
 movies.head()  # 定位到起始行，34436行
 
 
 # 2.导入用户相关的数据文件 users.dat，包括两个字段：用户ID, Twitter ID
-users = pd.read_csv('./语法基础/res/dataset/users.dat', delimiter='::',
+users = pd.read_csv('./res/dataset/users.dat', delimiter='::',
                     engine='python', header=None, names=['User ID', 'Twitter ID'], encoding='utf-8')
 users.head()  # [60283 rows x 2 columns]
 
 
 # 3.导入评分记录 rating.data，包括四个字段：用户ID，电影ID，评分，评分时间
-ratings = pd.read_csv('./语法基础/res/dataset/ratings.dat', delimiter='::',
+ratings = pd.read_csv('./res/dataset/ratings.dat', delimiter='::',
                       engine='python', header=None, names=['User ID', 'Movie ID', 'Rating', 'Rating Timestamp'], encoding='utf-8')
 ratings.head()  # [814505 rows x 4 columns]
 
@@ -55,12 +55,12 @@ ratings.describe()  # 电影评论的平均得分为 7.30, 方差大约 1.86
 
 plt.figure(figsize=[8, 8])
 plt.hist(x=ratings['Rating'], color=['orange'])
-plt.savefig('./语法基础/res/image/movie1.png')
+plt.savefig('./res/img/movie1.png')
 # plt.show()
 plt.figure(figsize=[8, 8])
 plt.boxplot(x=ratings['Rating'], showmeans=True, meanline=True)
 plt.grid()
-plt.savefig('./语法基础/res/image/movie2.png')
+plt.savefig('./res/img/movie2.png')
 # plt.show()
 
 
@@ -100,4 +100,4 @@ grid = (
     Grid(init_opts=opts.InitOpts(theme=ThemeType.LIGHT))
     .add(bar, grid_opts=opts.GridOpts(pos_left="30%"))
 )
-grid.render(path='./语法基础/res/html/movie1.html')
+grid.render(path='./res/html/movie1.html')
